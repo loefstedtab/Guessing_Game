@@ -1,29 +1,29 @@
-console.log('Working')
 
-// Step 1: Create a random number generator between 1-100
-// Step 2: Create an input box to enter a number. Use a button to submit that number.
-// Step 3: If not winning number, give hint as to whether guess is too high or too low.
+const numberBox = document.querySelector(".numberBox")
+const button= document.querySelector(".submit")
 
-function game(){
-    answer() = winningNumber ()
-}
-
-function answer(){
-return (Math.floor(Math.random() * 100) + 1)
-}
-
-let numberBox= document.querySelector(".numberBox")
-
-let button= document.querySelector(".submit")
+function winNum() {
+    return (Math.floor(Math.random()*100)+1)
+} 
 
 button.addEventListener('click', function(){
     let guess1 = numberBox.value
     console.log(guess1)
+})
+
+function comparison(winNum(), guess1){
+let result;
+if (winNum() === guess1){
+    result = 'Winner!';
+} else if (winNum() > guess1){
+    result = 'Hint: guess higher!'
+} else {
+    result = 'Hint: guess lower!'
 }
-)
+return result;
+}
 
 
 
 
 
-//entry into numberBox === answer <---winningNumber
