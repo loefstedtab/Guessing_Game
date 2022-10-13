@@ -1,26 +1,25 @@
 
-const numberBox = document.querySelector(".numberBox")
-const button= document.querySelector(".submit")
 
-function winNum() {
-    return (Math.floor(Math.random()*100)+1)
-} 
+const button = document.querySelector('#submit')
+const numberBox = document.querySelector('#numberBox')
+
+let winNum = (Math.floor(Math.random()*100)+1)
+
 
 button.addEventListener('click', function(){
     let guess1 = numberBox.value
-    console.log(guess1)
 })
 
-function comparison(winNum(), guess1){
-let result;
+const message = document.querySelector('#message')
+
+function comparison(){
 if (winNum() === guess1){
-    result = 'Winner!';
+    message.textContent = 'Winner!';
 } else if (winNum() > guess1){
-    result = 'Hint: guess higher!'
+    message.textContent = 'Hint: guess higher!'
 } else {
-    result = 'Hint: guess lower!'
+    message.textContent = 'Hint: guess lower!'
 }
-return result;
 }
 
 
