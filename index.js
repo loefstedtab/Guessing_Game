@@ -1,6 +1,4 @@
 console.log('Working')
-const numberBox = document.querySelector(".numberBox")
-console.log(numberBox)
 
 // Step 1: Create a random number generator between 1-100
 // Step 2: Create an input box to enter a number. Use a button to submit that number.
@@ -10,11 +8,11 @@ function game(){
     answer() = winningNumber ()
 }
 
-
-
 function answer(){
 return (Math.floor(Math.random() * 100) + 1)
 }
+
+let numberBox= document.querySelector(".numberBox")
 
 let button= document.querySelector(".submit")
 
